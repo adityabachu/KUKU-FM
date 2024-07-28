@@ -1,0 +1,59 @@
+.infiniteScroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: #fff;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .itemImage {
+    width: 100%;
+    height: 350px;
+    object-fit: fit;
+  }
+  
+  .itemTitle, .itemDescription, .itemAuthor, .itemDuration {
+    margin: 10px;
+  }
+  
+  .itemTitle {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .itemDescription, .itemAuthor, .itemDuration {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  .error {
+    text-align: center;
+    color: red;
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .itemImage {
+      height: 100px;
+    }
+  }
+  
